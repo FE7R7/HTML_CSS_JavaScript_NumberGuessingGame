@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+	<title>Guessing Game</title>
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script type="text/javascript" src="jScripts/guessingGame.js"></script>
+	<style>html{
+		background-color: rgb(255, 255, 204);
+	}</style>
+</head>
+
+<body class="w3-margin">
+	<header class="w3-row w3-teal w3-center">
+		<h1>Guessing Game</h1>
+	</header>
+	<div class="w3-row-padding w3-main w3-margin">
+		<div class="w3-third w3-container">
+			<h3>The rules of the game:</h3>
+			<p>The rules of the game are as follows:
+			<ol>
+				<li>Using the dropdown, select how many goes you get</li>
+				<li>Click on "Generate Random"</li>
+				<li>A new random number will be generated between 1 and 100</li>
+				<li>Enter your answer into the textbox</li>
+				<li>Click "Submit Guess"</li>
+				<li>If your answer is too low or too high then an image will be displayed to let you know </li>
+				<li>If you use all of your guesses without guessing the correct number then you loose</li>
+			</ol>
+			</p>
+		</div>
+		<div class="w3-third w3-container ">
+			<table class="w3-table">
+				<tr>
+					<td>Select Guess</td>
+					<td style="text-align: center">
+						<select id="attempts">
+							<option value="5">5</option>
+							<option value="10">10</option>
+							<option value="15">15</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center">
+						<button class="w3-button w3-teal w3-block" id="generateRandom">Generate Random</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Enter Guess</td>
+					<td><input id="userGuess" disabled /></td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center">
+						<button class="w3-button w3-teal w3-block" id="guess" disabled>Submit Guess</button>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<h2 class="w3-center" id="guessLeft"></h2>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align: center">
+						<button class="w3-button w3-teal w3-block" id="reset">Reset</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="w3-third w3-container w3=center">
+			<img src="images/guess.png" class="w3-image w3-center" id="hint" style="display: block;
+			margin-left: auto;
+			margin-right: auto;"/>
+		</div>
+	</div>
+</body>
+
+</html>
